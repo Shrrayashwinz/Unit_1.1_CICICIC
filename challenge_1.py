@@ -10,9 +10,10 @@
 # for that sequence.
 
 # Code that will cause an exception:
-my_list = [1, 2, 3]
+my_list = [1, 2, 3, 4, 5, 7, 12, 58, 17272]
 try:
     value = my_list[5]  # Index out of range 
+    print(value)
 except IndexError as ie:
     print(f'The exception is: {ie}')
 

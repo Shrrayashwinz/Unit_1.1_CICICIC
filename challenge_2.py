@@ -10,5 +10,20 @@
 # string representing a number, not an arbitrary string.
 
 # Code that will cause an exception:
-user_input = "hello"
-number = int(user_input)  # ValueError
+user_input = "Hello"
+
+try:
+    number = int(user_input) # ValueError
+
+except ValueError as ve:
+    print(f'The exception is: {ve}')
+
+except IndexError as ie:
+    print(f'The exception is: {ie}')
+
+
+else:
+    print("The conversion is a success. You chose the following:", number)
+
+finally:
+    print("Execution is complete! Have a good day moron!")
