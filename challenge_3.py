@@ -9,6 +9,9 @@
 
 
 def divide(a: float, b: float)  -> float | None:
+
+    a = float(input("Enter numerator: "))
+    b = float(input("Enter denominater: "))
     """
     Divides two numbers, handling division by zero.
 
@@ -22,13 +25,14 @@ def divide(a: float, b: float)  -> float | None:
     Raises:
         ZeroDivisionError: If the denominator is zero.
     """
-    return a / b
-    
-
-
-
-
-result = divide(10, 0)
-    
+    try:
+        return a / b
+    except ValueError as ve:
+        print(f"I am afraid this is not divisble. The exepction is: {ve}")
+        return None
+    except ZeroDivisionError as zde:
+        print(f"WE CANT DIVDE BY ZERO U JERK! The exeption, you moron, is {zde}")
+        return None
+     
 
 
